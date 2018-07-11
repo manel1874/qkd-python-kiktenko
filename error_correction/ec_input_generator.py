@@ -31,7 +31,7 @@ def main():
 
     args = parser.parse_args()
 
-    sifted_key_a, sifted_key_b, ver_ht_key = generate(
+    sifted_key_a, sifted_key_b = generate(
         args.frame_len, args.block_count, args.error_probability)
 
     array_to_file([sifted_key_a], 'sifted_key_a.txt')
