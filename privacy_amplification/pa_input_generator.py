@@ -6,14 +6,14 @@ import os
 
 sys.path.insert(0, os.path.abspath('..'))
 
-from utils.generate import generate_key
-from utils.files import array_to_file
-from utils.parseargs import ErrorPrintArgumentParser
+from common.generate import generate_key
+from common.files import array_to_file
+from common.parseargs import ErrorPrintArgumentParser
 
 
 def generate(message_size, toeplitz_seed_length):
-    key = generate_key(message_size)[0]
-    toeplitz_seed = generate_key(toeplitz_seed_length)[0]
+    key = generate_key(message_size)
+    toeplitz_seed = generate_key(toeplitz_seed_length)
     return key, toeplitz_seed
 
 
